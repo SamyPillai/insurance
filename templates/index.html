@@ -3,7 +3,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Predict Insurance Amount</title>
+  <title>Insurance Amount Calculator</title>
 <!--
 <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type='text/css'>
 </head>
 <body>
-    <h1 font-family = 'Calibri'>Predict Insurance Amount</h1>
+    <h1 font-family = 'Calibri'>Insurance Amount Calculator</h1>
     <form action="{{ url_for('predict')}}" method="post">
         <label for="age"><strong>Age:</strong></label>
         <input id = "age" type="number" name="age" placeholder="age" required="required" />
@@ -39,7 +39,7 @@
                 <option value="no">No</option>
             </select>
             <br>
-        <input type="submit" value="Predict">
+        <input type="submit" value="Calculate">
     </form>
    <br>
    <br>
