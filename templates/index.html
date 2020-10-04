@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Insurance Amount</title>
+<!--
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+-->  
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type='text/css'>
+</head>
+<body>
+    <h1 font-family = 'Calibri'>Predict Insurance Amount</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+        <label for="age"><strong>Age:</strong></label>
+        <input id = "age" type="number" name="age" placeholder="age" required="required" />
+        <br>
+        <label for="gender"><strong>Gender:</strong></label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        <br>
+        <label for="height"><strong>Height(Meters):</strong></label>
+        <input id = "height" type="number" name="height" step="0.1" placeholder="0.00" required="required" />
+        <br>
+        <label for="weight"><strong>Weight(Kilograms):</strong></label>
+        <input id = "weight" type="number" name="weight" required="required" />
+        <br>
+        <label for="children"><strong>No of Childrens:</strong></label>
+        <input id = "children" type="number" name="children" placeholder="children" required="required" />
+        <br>
+        <label for="smoker"> <strong> Smoker: </strong> </label>
+            <select id="smoker" name="smoker" required="required">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+        <input type="submit" value="Predict">
+    </form>
+   <br>
+   <br>
+   <p> <font face = "Calibri" size = "+2" color = "#3D3D3D" > <strong>{{ prediction_text }}</strong>
+    
+        </font>
+   </p>
+
+   
+</body>
+</html>
