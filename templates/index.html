@@ -13,7 +13,10 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type='text/css'>
 </head>
 <body>
-    <h1 font-family = 'Calibri'>Insurance Amount Calculator</h1>
+    
+    <div class="cf">
+    <div class="fields">
+        <h1>Insurance Amount Calculator</h1>
     <form action="{{ url_for('predict')}}" method="post">
         <label for="age"><strong>Age:</strong></label>
         <input id = "age" type="number" name="age" placeholder="age" required="required" />
@@ -42,12 +45,9 @@
         <input type="submit" value="Calculate">
     </form>
    <br>
-   <br>
-   <p> <font face = "Calibri" size = "+2" color = "#3D3D3D" > <strong>{{ prediction_text }}</strong>
-    
-        </font>
-   </p>
-
-   
+    <h2> {{ prediction_text }} </h2>  
+</div> 
+    <div class='image'></div>
+</div>
 </body>
 </html>
